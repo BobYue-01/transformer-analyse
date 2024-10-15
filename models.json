@@ -1,0 +1,109 @@
+{
+    "models": [
+        {
+            "name": "Albert",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "Bert",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "DistilBert",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "Electra",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "GPT2",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "GPTBigCode",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "GPTNeo",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "HuBert",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "IBert",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "ImageGPT",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "Longformer",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "LongT5",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "MobileBert",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "OpenAIGPT",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        },
+        {
+            "name": "SqueezeBert",
+            "config name": null,
+            "model name": null,
+            "config": null,
+            "input": null
+        }
+    ]
+}
