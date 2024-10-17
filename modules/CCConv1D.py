@@ -1,13 +1,11 @@
 import torch
-from torch import nn
 from transformers.pytorch_utils import Conv1D
 
 
 def center_conv1d(layer: Conv1D) -> None:
-    if isinstance(layer, Conv1D):
-        layer.weight.data = layer.weight - layer.weight.mean(dim=-1, keepdim=True)
-        if layer.bias is not None:
-            layer.bias.data = layer.bias - layer.bias.mean(dim=0, keepdim=True)
+    layer.weight.data = layer.weight - layer.weight.mean(dim=-1, keepdim=True)
+    if layer.bias is not None:
+        layer.bias.data = layer.bias - layer.bias.mean(dim=0, keepdim=True)
     return None
 
 

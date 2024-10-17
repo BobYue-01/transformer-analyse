@@ -1,10 +1,8 @@
-import torch
 from torch import nn
 
 
 def center_embedding(layer: nn.Embedding) -> None:
-    if isinstance(layer, nn.Embedding):
-        layer.weight.data = layer.weight - layer.weight.mean(dim=-1, keepdim=True)
+    layer.weight.data = layer.weight - layer.weight.mean(dim=-1, keepdim=True)
     return None
 
 

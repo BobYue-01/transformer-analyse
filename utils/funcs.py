@@ -69,6 +69,7 @@ def create_hook_fns(counter: Counter):
         if 'LayerNorm' in module.__class__.__name__:
             counter.ln_cnt += 1
             if inputs_centered:
+                counter.layernorms.add(module)
                 counter.foldable_cnt += 1
                 counter.center_modules |= last_modules
 

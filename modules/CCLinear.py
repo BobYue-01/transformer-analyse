@@ -3,10 +3,9 @@ from torch import nn
 
 
 def center_linear(layer: nn.Linear) -> None:
-    if isinstance(layer, nn.Linear):
-        layer.weight.data = layer.weight - layer.weight.mean(dim=0, keepdim=True)
-        if layer.bias is not None:
-            layer.bias.data = layer.bias - layer.bias.mean(dim=0, keepdim=True)
+    layer.weight.data = layer.weight - layer.weight.mean(dim=0, keepdim=True)
+    if layer.bias is not None:
+        layer.bias.data = layer.bias - layer.bias.mean(dim=0, keepdim=True)
     return None
 
 
