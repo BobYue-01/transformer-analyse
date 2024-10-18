@@ -4,44 +4,55 @@ from .Counter import Counter
 from .MetadataTensor import MetadataTensor
 
 
-def apply_func_to_nested_tuple(t, func):
-    """
-    递归地对嵌套的 tuple 的每个元素应用函数 func，并保持原有的嵌套结构。
+class HookManager:
+    def __init__(self, model, hook_fn=None, hook_pre_fn=None, module_to_hook=None):
+        self.model = model
+        self.hook_fn = hook_fn or (lambda module, inputs, outputs: outputs)
+        self.hook_pre_fn = hook_pre_fn or (lambda module, inputs: None)
+        self.module_to_hook = module_to_hook
+        self.hooks = []
 
-    :param t: 一个嵌套的 tuple
-    :param func: 要应用到每个非 tuple 元素的函数
-    :return: 返回一个结构与原 tuple 相同，但元素经过 func 操作的 tuple
-    """
-    if isinstance(t, tuple):
-        # 如果是 tuple，递归地对每个元素应用函数
-        return tuple(apply_func_to_nested_tuple(item, func) for item in t)
-    else:
-        # 如果不是 tuple，应用函数 func
-        return func(t)
+    def __enter__(self):
+        if self.module_to_hook is None:
+            for _, layer in self.model.named_modules():
+                self.hooks.append(layer.register_forward_pre_hook(self.hook_pre_fn))
+                self.hooks.append(layer.register_forward_hook(self.hook_fn))
+        else:
+            for layer in self.module_to_hook:
+                self.hooks.append(layer.register_forward_pre_hook(self.hook_pre_fn))
+                self.hooks.append(layer.register_forward_hook(self.hook_fn))
+        return self
 
-
-def get_shape(t):
-    if isinstance(t, torch.Tensor):
-        return tuple(t.size())
-    else:
-        return None
-
-
-def get_centered(t):
-    if isinstance(t, MetadataTensor) and hasattr(t, 'centered'):
-        return t.centered
-    else:
-        return None
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        for hook in self.hooks:
+            hook.remove()
 
 
-def get_last_modules(t):
-    if isinstance(t, MetadataTensor) and hasattr(t, 'last_modules'):
-        return t.last_modules
-    else:
-        return set()
+def create_analyse_hook_fns(counter: Counter):
+    def apply_func_to_nested_tuple(t, func):
+        if isinstance(t, tuple):
+            return tuple(apply_func_to_nested_tuple(x, func) for x in t)
+        else:
+            return func(t)
 
+    def get_shape(t):
+        if isinstance(t, torch.Tensor):
+            return tuple(t.size())
+        else:
+            return None
 
-def create_hook_fns(counter: Counter):
+    def get_centered(t):
+        if isinstance(t, MetadataTensor) and hasattr(t, 'centered'):
+            return t.centered
+        else:
+            return None
+
+    def get_last_modules(t):
+        if isinstance(t, MetadataTensor) and hasattr(t, 'last_modules'):
+            return t.last_modules
+        else:
+            return set()
+
     def hook_pre_fn(module, inputs):
         print('  ' * counter.indent, '< ', module.__class__.__name__, '>')
         counter.indent += 1

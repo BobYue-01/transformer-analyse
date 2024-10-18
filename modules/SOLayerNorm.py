@@ -8,8 +8,7 @@ def soln_forward(self, x: torch.Tensor) -> torch.Tensor:
 
 
 def replace_layer_norm(layer: torch.nn.LayerNorm) -> None:
-    if isinstance(layer, torch.nn.LayerNorm):
-        layer.__class__ = type('SOLayerNorm', (nn.Module,), {'forward': soln_forward})
+    layer.__class__ = type('SOLayerNorm', (nn.Module,), {'forward': soln_forward})
     return None
 
 

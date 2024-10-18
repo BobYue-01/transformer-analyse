@@ -5,5 +5,4 @@ class Counter:
         self.center_modules = set()
         self.layernorms = set()
         self.layer_info = []
-        self.hooks = []
         self.indent = 0
