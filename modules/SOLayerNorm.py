@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from torch.profiler import profile, record_function, ProfilerActivity
 
 
 def native_soln_forward(
@@ -32,8 +31,8 @@ def soln_forward(
     self: nn.LayerNorm,
     x: torch.Tensor
 ) -> torch.Tensor:
-    var = torch.var(x, dim=-1, unbiased=False, keepdim=True)
-    normalized_tensor = x / torch.sqrt(var + self.eps)
+    norm_x = x.norm(2, dim=-1, keepdim=True) * x.size(-1) ** -.5
+    normalized_tensor = x / (norm_x + self.eps)
     if self.elementwise_affine:
         normalized_tensor = normalized_tensor * self.weight + self.bias
     return normalized_tensor
@@ -41,7 +40,7 @@ def soln_forward(
 
 def replace_layer_norm_forward(
     layer: nn.LayerNorm,
-    forward_fn: callable = native_soln_forward
+    forward_fn: callable = soln_forward
 ) -> None:
     layer.__class__ = type(
         'SOLayerNorm',
@@ -52,7 +51,14 @@ def replace_layer_norm_forward(
 
 
 if __name__ == '__main__':
+    from torch.profiler import profile, record_function, ProfilerActivity, schedule
     torch.backends.cudnn.enabled = False
+    torch.cuda.empty_cache()
+    my_schedule = schedule(
+        wait=100,
+        warmup=50,
+        active=250,
+    )
 
     class MyModel(nn.Module):
         def __init__(self) -> None:
@@ -71,28 +77,36 @@ if __name__ == '__main__':
 
     replace_layer_norm_forward(model.norm, forward_fn=myln_forward)
 
-    with profile(activities=[
-        ProfilerActivity.CPU, ProfilerActivity.CUDA
-    ], record_shapes=True) as prof:
+    with profile(
+        activities=[
+            ProfilerActivity.CPU, ProfilerActivity.CUDA
+        ],
+        schedule=my_schedule,
+        record_shapes=True
+    ) as prof:
         with torch.no_grad():
             with record_function("LayerNorm"):
-                for _ in range(1000):
+                for _ in range(1200):
                     model(x)
+                    prof.step()
                 print(model(x))
-
-    print(prof.key_averages().table(sort_by="self_cpu_time_total", row_limit=10))
+        print(prof.key_averages().table(sort_by="self_cpu_time_total", row_limit=10))
 
     replace_layer_norm_forward(model.norm, forward_fn=soln_forward)
 
-    x = x - x.mean()
+    x -= x.mean()
 
-    with profile(activities=[
-        ProfilerActivity.CPU, ProfilerActivity.CUDA
-    ], record_shapes=True) as prof:
+    with profile(
+        activities=[
+            ProfilerActivity.CPU, ProfilerActivity.CUDA
+        ],
+        schedule=my_schedule,
+        record_shapes=True
+    ) as prof:
         with torch.no_grad():
             with record_function("SOLayerNorm"):
-                for _ in range(1000):
+                for _ in range(1200):
                     model(x)
+                    prof.step()
                 print(model(x))
-
-    print(prof.key_averages().table(sort_by="self_cpu_time_total", row_limit=10))
+        print(prof.key_averages().table(sort_by="self_cpu_time_total", row_limit=10))
