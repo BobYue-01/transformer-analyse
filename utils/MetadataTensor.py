@@ -3,11 +3,11 @@ import torch
 
 class MetadataTensor(torch.Tensor):
     @staticmethod
-    def __new__(cls, data, centered=False, last_modules=set()):
+    def __new__(cls, data: torch.Tensor, centered=False, last_modules=set()):
         self = torch.Tensor._make_subclass(cls, data)
         return self
 
-    def __init__(self, data, centered=False, last_modules=set()):
+    def __init__(self, data: torch.Tensor, centered=False, last_modules=set()):
         self.centered = centered
         self.last_modules = last_modules
 
@@ -16,10 +16,8 @@ class MetadataTensor(torch.Tensor):
             return False
         elif name == 'last_modules':
             return set()
-        raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
-
-    # def __init__(self, data, centered=False):
-    #     self.centered = centered
+        raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'")
 
     def __add__(self, other):
         result = super(MetadataTensor, self).__add__(other)
@@ -29,7 +27,8 @@ class MetadataTensor(torch.Tensor):
         else:
             centered = False
             last_modules = self.last_modules
-        return MetadataTensor(result, centered=centered, last_modules=last_modules)
+        return MetadataTensor(
+            result, centered=centered, last_modules=last_modules)
 
     def __repr__(self):
         if hasattr(self, "centered"):
