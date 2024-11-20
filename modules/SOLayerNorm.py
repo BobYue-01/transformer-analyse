@@ -40,10 +40,11 @@ def soln_forward(
 
 def replace_layer_norm_forward(
     layer: nn.LayerNorm,
-    forward_fn: callable = soln_forward
+    forward_fn: callable = soln_forward,
+    class_name: str = 'SOLayerNorm'
 ) -> None:
     layer.__class__ = type(
-        'SOLayerNorm',
+        class_name,
         (nn.Module,),
         {'forward': forward_fn}
     )

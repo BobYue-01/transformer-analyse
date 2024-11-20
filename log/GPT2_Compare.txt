@@ -1,0 +1,1686 @@
+[1;34m# 0 [ Test ] Embedding_original ?= Embedding_folded[0m
+[1;33mMean abs diff: 0.0005862714606337249[0m
+[1;31m# 0 [ Fail ] Embedding_original != Embedding_folded[0m
+
+[1;34m# 1 [ Test ] Embedding_original ?= Embedding_folded[0m
+[1;33mMean abs diff: 0.0006422363221645355[0m
+[1;31m# 1 [ Fail ] Embedding_original != Embedding_folded[0m
+
+[1;34m# 2 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMean abs diff: 0.0008070007897913456[0m
+[1;31m# 2 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 3 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.024969100952148438
+Location: [0, 88, 120]
+MyLayerNorm_original: 4.170929431915283
+SOLayerNorm_folded: 4.195898532867432[0m
+[1;31m# 3 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 4 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.014474153518676758
+Location: [0, 108, 553]
+Conv1D_original: 2.291804075241089
+Conv1D_folded: 2.3062782287597656[0m
+[1;31m# 4 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 5 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.004483520984649658
+Location: [0, 0, 682]
+Conv1D_original: -0.1537477970123291
+Conv1D_folded: -0.15823131799697876[0m
+[1;31m# 5 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 6 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.004483520984649658
+Location: [0, 0, 682]
+Dropout_original: -0.1537477970123291
+Dropout_folded: -0.15823131799697876[0m
+[1;31m# 6 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 7 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.004483520984649658
+Location: [0, 0, 682]
+GPT2SdpaAttention_original: -0.1537477970123291
+GPT2SdpaAttention_folded: -0.15823131799697876[0m
+[1;31m# 7 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 8 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.014325141906738281
+Location: [0, 0, 93, 13]
+GPT2SdpaAttention_original: -2.2161920070648193
+GPT2SdpaAttention_folded: -2.2305171489715576[0m
+[1;31m# 8 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 9 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.013627767562866211
+Location: [0, 10, 107, 38]
+GPT2SdpaAttention_original: -2.328652858734131
+GPT2SdpaAttention_folded: -2.342280626296997[0m
+[1;31m# 9 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 10 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 10 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 11 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.024352550506591797
+Location: [0, 80, 171]
+MyLayerNorm_original: 4.0517988204956055
+SOLayerNorm_folded: 4.076151371002197[0m
+[1;31m# 11 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 12 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.014632940292358398
+Location: [0, 53, 1955]
+Conv1D_original: 2.7105865478515625
+Conv1D_folded: 2.725219488143921[0m
+[1;31m# 12 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 13 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.015510797500610352
+Location: [0, 93, 35]
+NewGELUActivation_original: 1.902402639389038
+NewGELUActivation_folded: 1.9179134368896484[0m
+[1;31m# 13 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 14 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.008244052529335022
+Location: [0, 81, 344]
+Conv1D_original: 0.21273958683013916
+Conv1D_folded: 0.22098363935947418[0m
+[1;31m# 14 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 15 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.008244052529335022
+Location: [0, 81, 344]
+Dropout_original: 0.21273958683013916
+Dropout_folded: 0.22098363935947418[0m
+[1;31m# 15 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 16 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.008244052529335022
+Location: [0, 81, 344]
+GPT2MLP_original: 0.21273958683013916
+GPT2MLP_folded: 0.22098363935947418[0m
+[1;31m# 16 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 17 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010029196739196777
+Location: [0, 81, 544]
+GPT2Block_original: 0.23104454576969147
+GPT2Block_folded: 0.24107374250888824[0m
+[1;31m# 17 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 18 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.014325141906738281
+Location: [0, 0, 93, 13]
+GPT2Block_original: -2.2161920070648193
+GPT2Block_folded: -2.2305171489715576[0m
+[1;31m# 18 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 19 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.013627767562866211
+Location: [0, 10, 107, 38]
+GPT2Block_original: -2.328652858734131
+GPT2Block_folded: -2.342280626296997[0m
+[1;31m# 19 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 20 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 20 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 21 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.01695561408996582
+Location: [0, 25, 680]
+MyLayerNorm_original: -0.6648478507995605
+SOLayerNorm_folded: -0.6818034648895264[0m
+[1;31m# 21 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 22 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.009375900030136108
+Location: [0, 18, 1005]
+Conv1D_original: 0.1890280842781067
+Conv1D_folded: 0.17965218424797058[0m
+[1;31m# 22 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 23 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0026455670595169067
+Location: [0, 0, 499]
+Conv1D_original: 0.041134849190711975
+Conv1D_folded: 0.04378041625022888[0m
+[1;31m# 23 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 24 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0026455670595169067
+Location: [0, 0, 499]
+Dropout_original: 0.041134849190711975
+Dropout_folded: 0.04378041625022888[0m
+[1;31m# 24 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 25 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.0026455670595169067
+Location: [0, 0, 499]
+GPT2SdpaAttention_original: 0.041134849190711975
+GPT2SdpaAttention_folded: 0.04378041625022888[0m
+[1;31m# 25 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 26 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.009375900030136108
+Location: [0, 3, 18, 45]
+GPT2SdpaAttention_original: 0.1890280842781067
+GPT2SdpaAttention_folded: 0.17965218424797058[0m
+[1;31m# 26 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 27 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.008806109428405762
+Location: [0, 7, 17, 17]
+GPT2SdpaAttention_original: 0.7052642107009888
+GPT2SdpaAttention_folded: 0.7140703201293945[0m
+[1;31m# 27 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 28 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 28 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 29 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.01661813259124756
+Location: [0, 3, 751]
+MyLayerNorm_original: 1.1968920230865479
+SOLayerNorm_folded: 1.2135101556777954[0m
+[1;31m# 29 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 30 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.012927338480949402
+Location: [0, 1, 1617]
+Conv1D_original: 0.10270221531391144
+Conv1D_folded: 0.08977487683296204[0m
+[1;31m# 30 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 31 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.009754359722137451
+Location: [0, 21, 1655]
+NewGELUActivation_original: 0.8887283205986023
+NewGELUActivation_folded: 0.8984826803207397[0m
+[1;31m# 31 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 32 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011033546179533005
+Location: [0, 56, 161]
+Conv1D_original: 0.029454577714204788
+Conv1D_folded: 0.04048812389373779[0m
+[1;31m# 32 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 33 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.011033546179533005
+Location: [0, 56, 161]
+Dropout_original: 0.029454577714204788
+Dropout_folded: 0.04048812389373779[0m
+[1;31m# 33 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 34 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.011033546179533005
+Location: [0, 56, 161]
+GPT2MLP_original: 0.029454577714204788
+GPT2MLP_folded: 0.04048812389373779[0m
+[1;31m# 34 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 35 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.016707956790924072
+Location: [0, 56, 545]
+GPT2Block_original: 0.15251173079013824
+GPT2Block_folded: 0.16921968758106232[0m
+[1;31m# 35 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 36 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.009375900030136108
+Location: [0, 3, 18, 45]
+GPT2Block_original: 0.1890280842781067
+GPT2Block_folded: 0.17965218424797058[0m
+[1;31m# 36 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 37 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.008806109428405762
+Location: [0, 7, 17, 17]
+GPT2Block_original: 0.7052642107009888
+GPT2Block_folded: 0.7140703201293945[0m
+[1;31m# 37 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 38 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 38 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 39 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.01927173137664795
+Location: [0, 2, 339]
+MyLayerNorm_original: 1.287227749824524
+SOLayerNorm_folded: 1.267956018447876[0m
+[1;31m# 39 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 40 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011374086141586304
+Location: [0, 103, 1005]
+Conv1D_original: 0.3172737658023834
+Conv1D_folded: 0.3058996796607971[0m
+[1;31m# 40 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 41 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0037464238703250885
+Location: [0, 0, 639]
+Conv1D_original: -0.017950668931007385
+Conv1D_folded: -0.021697092801332474[0m
+[1;31m# 41 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 42 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0037464238703250885
+Location: [0, 0, 639]
+Dropout_original: -0.017950668931007385
+Dropout_folded: -0.021697092801332474[0m
+[1;31m# 42 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 43 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.0037464238703250885
+Location: [0, 0, 639]
+GPT2SdpaAttention_original: -0.017950668931007385
+GPT2SdpaAttention_folded: -0.021697092801332474[0m
+[1;31m# 43 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 44 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.011374086141586304
+Location: [0, 3, 103, 45]
+GPT2SdpaAttention_original: 0.3172737658023834
+GPT2SdpaAttention_folded: 0.3058996796607971[0m
+[1;31m# 44 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 45 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010216355323791504
+Location: [0, 4, 75, 15]
+GPT2SdpaAttention_original: 0.8135812282562256
+GPT2SdpaAttention_folded: 0.8237975835800171[0m
+[1;31m# 45 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 46 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 46 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 47 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.017746247351169586
+Location: [0, 11, 744]
+MyLayerNorm_original: 0.06702630966901779
+SOLayerNorm_folded: 0.049280062317848206[0m
+[1;31m# 47 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 48 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.012669701129198074
+Location: [0, 10, 2082]
+Conv1D_original: 0.0724320262670517
+Conv1D_folded: 0.05976232513785362[0m
+[1;31m# 48 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 49 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.01042187213897705
+Location: [0, 38, 923]
+NewGELUActivation_original: 1.0340144634246826
+NewGELUActivation_folded: 1.0235925912857056[0m
+[1;31m# 49 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 50 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0057813748717308044
+Location: [0, 37, 455]
+Conv1D_original: 0.10896202176809311
+Conv1D_folded: 0.1031806468963623[0m
+[1;31m# 50 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 51 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0057813748717308044
+Location: [0, 37, 455]
+Dropout_original: 0.10896202176809311
+Dropout_folded: 0.1031806468963623[0m
+[1;31m# 51 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 52 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.0057813748717308044
+Location: [0, 37, 455]
+GPT2MLP_original: 0.10896202176809311
+GPT2MLP_folded: 0.1031806468963623[0m
+[1;31m# 52 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 53 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.020275413990020752
+Location: [0, 56, 161]
+GPT2Block_original: 0.15654578804969788
+GPT2Block_folded: 0.17682120203971863[0m
+[1;31m# 53 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 54 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.011374086141586304
+Location: [0, 3, 103, 45]
+GPT2Block_original: 0.3172737658023834
+GPT2Block_folded: 0.3058996796607971[0m
+[1;31m# 54 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 55 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010216355323791504
+Location: [0, 4, 75, 15]
+GPT2Block_original: 0.8135812282562256
+GPT2Block_folded: 0.8237975835800171[0m
+[1;31m# 55 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 56 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 56 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 57 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.01905938982963562
+Location: [0, 92, 269]
+MyLayerNorm_original: -0.3440035581588745
+SOLayerNorm_folded: -0.3249441683292389[0m
+[1;31m# 57 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 58 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.01158323884010315
+Location: [0, 28, 505]
+Conv1D_original: -0.41374480724334717
+Conv1D_folded: -0.402161568403244[0m
+[1;31m# 58 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 59 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.003918789327144623
+Location: [0, 0, 566]
+Conv1D_original: -0.08833427727222443
+Conv1D_folded: -0.09225306659936905[0m
+[1;31m# 59 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 60 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.003918789327144623
+Location: [0, 0, 566]
+Dropout_original: -0.08833427727222443
+Dropout_folded: -0.09225306659936905[0m
+[1;31m# 60 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 61 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.003918789327144623
+Location: [0, 0, 566]
+GPT2SdpaAttention_original: -0.08833427727222443
+GPT2SdpaAttention_folded: -0.09225306659936905[0m
+[1;31m# 61 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 62 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.01100003719329834
+Location: [0, 7, 41, 21]
+GPT2SdpaAttention_original: -0.3457163870334625
+GPT2SdpaAttention_folded: -0.35671642422676086[0m
+[1;31m# 62 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 63 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.011095583438873291
+Location: [0, 3, 75, 48]
+GPT2SdpaAttention_original: 0.5344057083129883
+GPT2SdpaAttention_folded: 0.523310124874115[0m
+[1;31m# 63 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 64 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 64 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 65 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.018471837043762207
+Location: [0, 45, 258]
+MyLayerNorm_original: -1.600568175315857
+SOLayerNorm_folded: -1.5820963382720947[0m
+[1;31m# 65 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 66 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011124193668365479
+Location: [0, 80, 2666]
+Conv1D_original: -0.020859986543655396
+Conv1D_folded: -0.031984180212020874[0m
+[1;31m# 66 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 67 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.011982202529907227
+Location: [0, 19, 671]
+NewGELUActivation_original: 1.0775835514068604
+NewGELUActivation_folded: 1.0895657539367676[0m
+[1;31m# 67 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 68 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.005589447915554047
+Location: [0, 16, 486]
+Conv1D_original: 0.04837927222251892
+Conv1D_folded: 0.05396872013807297[0m
+[1;31m# 68 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 69 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.005589447915554047
+Location: [0, 16, 486]
+Dropout_original: 0.04837927222251892
+Dropout_folded: 0.05396872013807297[0m
+[1;31m# 69 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 70 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.005589447915554047
+Location: [0, 16, 486]
+GPT2MLP_original: 0.04837927222251892
+GPT2MLP_folded: 0.05396872013807297[0m
+[1;31m# 70 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 71 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.020469695329666138
+Location: [0, 56, 161]
+GPT2Block_original: 0.1617766171693802
+GPT2Block_folded: 0.18224631249904633[0m
+[1;31m# 71 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 72 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.01100003719329834
+Location: [0, 7, 41, 21]
+GPT2Block_original: -0.3457163870334625
+GPT2Block_folded: -0.35671642422676086[0m
+[1;31m# 72 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 73 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.011095583438873291
+Location: [0, 3, 75, 48]
+GPT2Block_original: 0.5344057083129883
+GPT2Block_folded: 0.523310124874115[0m
+[1;31m# 73 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 74 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 74 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 75 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019119471311569214
+Location: [0, 45, 445]
+MyLayerNorm_original: 0.40205734968185425
+SOLayerNorm_folded: 0.42117682099342346[0m
+[1;31m# 75 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 76 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011779360473155975
+Location: [0, 83, 2058]
+Conv1D_original: 0.0977482944726944
+Conv1D_folded: 0.08596893399953842[0m
+[1;31m# 76 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 77 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0012659300118684769
+Location: [0, 0, 103]
+Conv1D_original: 3.650784492492676e-07
+Conv1D_folded: -0.0012655649334192276[0m
+[1;31m# 77 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 78 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0012659300118684769
+Location: [0, 0, 103]
+Dropout_original: 3.650784492492676e-07
+Dropout_folded: -0.0012655649334192276[0m
+[1;31m# 78 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 79 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.0012659300118684769
+Location: [0, 0, 103]
+GPT2SdpaAttention_original: 3.650784492492676e-07
+GPT2SdpaAttention_folded: -0.0012655649334192276[0m
+[1;31m# 79 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 80 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010969460010528564
+Location: [0, 0, 40, 13]
+GPT2SdpaAttention_original: -0.6157969236373901
+GPT2SdpaAttention_folded: -0.6267663836479187[0m
+[1;31m# 80 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 81 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.011779360473155975
+Location: [0, 8, 83, 10]
+GPT2SdpaAttention_original: 0.0977482944726944
+GPT2SdpaAttention_folded: 0.08596893399953842[0m
+[1;31m# 81 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 82 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 82 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 83 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019959330558776855
+Location: [0, 45, 445]
+MyLayerNorm_original: 0.4275323748588562
+SOLayerNorm_folded: 0.44749170541763306[0m
+[1;31m# 83 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 84 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.012249946594238281
+Location: [0, 91, 2901]
+Conv1D_original: 0.27684319019317627
+Conv1D_folded: 0.264593243598938[0m
+[1;31m# 84 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 85 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.011804521083831787
+Location: [0, 3, 2274]
+NewGELUActivation_original: 0.9147936701774597
+NewGELUActivation_folded: 0.9265981912612915[0m
+[1;31m# 85 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 86 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.008847035467624664
+Location: [0, 108, 408]
+Conv1D_original: 0.05973663926124573
+Conv1D_folded: 0.06858367472887039[0m
+[1;31m# 86 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 87 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.008847035467624664
+Location: [0, 108, 408]
+Dropout_original: 0.05973663926124573
+Dropout_folded: 0.06858367472887039[0m
+[1;31m# 87 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 88 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.008847035467624664
+Location: [0, 108, 408]
+GPT2MLP_original: 0.05973663926124573
+GPT2MLP_folded: 0.06858367472887039[0m
+[1;31m# 88 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 89 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.019831165671348572
+Location: [0, 56, 219]
+GPT2Block_original: 0.03682684153318405
+GPT2Block_folded: 0.05665800720453262[0m
+[1;31m# 89 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 90 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010969460010528564
+Location: [0, 0, 40, 13]
+GPT2Block_original: -0.6157969236373901
+GPT2Block_folded: -0.6267663836479187[0m
+[1;31m# 90 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 91 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.011779360473155975
+Location: [0, 8, 83, 10]
+GPT2Block_original: 0.0977482944726944
+GPT2Block_folded: 0.08596893399953842[0m
+[1;31m# 91 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 92 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 92 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 93 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.018637537956237793
+Location: [0, 83, 50]
+MyLayerNorm_original: 1.9090592861175537
+SOLayerNorm_folded: 1.890421748161316[0m
+[1;31m# 93 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 94 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.01238393783569336
+Location: [0, 83, 1389]
+Conv1D_original: -0.7469881772994995
+Conv1D_folded: -0.7346042394638062[0m
+[1;31m# 94 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 95 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.00583095196634531
+Location: [0, 0, 152]
+Conv1D_original: 0.014236622489988804
+Conv1D_folded: 0.008405670523643494[0m
+[1;31m# 95 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 96 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.00583095196634531
+Location: [0, 0, 152]
+Dropout_original: 0.014236622489988804
+Dropout_folded: 0.008405670523643494[0m
+[1;31m# 96 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 97 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.00583095196634531
+Location: [0, 0, 152]
+GPT2SdpaAttention_original: 0.014236622489988804
+GPT2SdpaAttention_folded: 0.008405670523643494[0m
+[1;31m# 97 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 98 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.01238393783569336
+Location: [0, 9, 83, 45]
+GPT2SdpaAttention_original: -0.7469881772994995
+GPT2SdpaAttention_folded: -0.7346042394638062[0m
+[1;31m# 98 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 99 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010766491293907166
+Location: [0, 8, 83, 44]
+GPT2SdpaAttention_original: 0.12956908345222473
+GPT2SdpaAttention_folded: 0.11880259215831757[0m
+[1;31m# 99 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 100 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 100 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 101 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.018054485321044922
+Location: [0, 83, 50]
+MyLayerNorm_original: 2.119429111480713
+SOLayerNorm_folded: 2.101374626159668[0m
+[1;31m# 101 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 102 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011196941137313843
+Location: [0, 76, 2522]
+Conv1D_original: 0.38081851601600647
+Conv1D_folded: 0.3920154571533203[0m
+[1;31m# 102 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 103 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.010343790054321289
+Location: [0, 69, 1540]
+NewGELUActivation_original: 1.1551231145858765
+NewGELUActivation_folded: 1.1447793245315552[0m
+[1;31m# 103 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 104 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.006207544356584549
+Location: [0, 85, 673]
+Conv1D_original: 0.027644667774438858
+Conv1D_folded: 0.03385221213102341[0m
+[1;31m# 104 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 105 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.006207544356584549
+Location: [0, 85, 673]
+Dropout_original: 0.027644667774438858
+Dropout_folded: 0.03385221213102341[0m
+[1;31m# 105 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 106 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.006207544356584549
+Location: [0, 85, 673]
+GPT2MLP_original: 0.027644667774438858
+GPT2MLP_folded: 0.03385221213102341[0m
+[1;31m# 106 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 107 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.017522558569908142
+Location: [0, 56, 219]
+GPT2Block_original: -0.0001673288643360138
+GPT2Block_folded: 0.01735522970557213[0m
+[1;31m# 107 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 108 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.01238393783569336
+Location: [0, 9, 83, 45]
+GPT2Block_original: -0.7469881772994995
+GPT2Block_folded: -0.7346042394638062[0m
+[1;31m# 108 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 109 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010766491293907166
+Location: [0, 8, 83, 44]
+GPT2Block_original: 0.12956908345222473
+GPT2Block_folded: 0.11880259215831757[0m
+[1;31m# 109 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 110 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 110 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 111 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019094228744506836
+Location: [0, 17, 602]
+MyLayerNorm_original: -0.36182907223701477
+SOLayerNorm_folded: -0.34273484349250793[0m
+[1;31m# 111 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 112 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011177361011505127
+Location: [0, 45, 22]
+Conv1D_original: -0.7524052262306213
+Conv1D_folded: -0.7412278652191162[0m
+[1;31m# 112 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 113 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.003346705809235573
+Location: [0, 0, 228]
+Conv1D_original: -0.01483784057199955
+Conv1D_folded: -0.018184546381235123[0m
+[1;31m# 113 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 114 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.003346705809235573
+Location: [0, 0, 228]
+Dropout_original: -0.01483784057199955
+Dropout_folded: -0.018184546381235123[0m
+[1;31m# 114 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 115 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.003346705809235573
+Location: [0, 0, 228]
+GPT2SdpaAttention_original: -0.01483784057199955
+GPT2SdpaAttention_folded: -0.018184546381235123[0m
+[1;31m# 115 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 116 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.01099521666765213
+Location: [0, 0, 92, 19]
+GPT2SdpaAttention_original: -0.01154501736164093
+GPT2SdpaAttention_folded: -0.0005498006939888[0m
+[1;31m# 116 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 117 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010459661483764648
+Location: [0, 10, 63, 20]
+GPT2SdpaAttention_original: -1.1593852043151855
+GPT2SdpaAttention_folded: -1.1698448657989502[0m
+[1;31m# 117 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 118 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 118 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 119 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.01853466033935547
+Location: [0, 17, 602]
+MyLayerNorm_original: -0.688582181930542
+SOLayerNorm_folded: -0.6700475215911865[0m
+[1;31m# 119 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 120 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.01248881220817566
+Location: [0, 126, 761]
+Conv1D_original: 0.5002280473709106
+Conv1D_folded: 0.487739235162735[0m
+[1;31m# 120 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 121 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.010856389999389648
+Location: [0, 90, 1419]
+NewGELUActivation_original: 1.0857973098754883
+NewGELUActivation_folded: 1.0749409198760986[0m
+[1;31m# 121 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 122 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.008718587458133698
+Location: [0, 104, 621]
+Conv1D_original: 0.03857985883951187
+Conv1D_folded: 0.04729844629764557[0m
+[1;31m# 122 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 123 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.008718587458133698
+Location: [0, 104, 621]
+Dropout_original: 0.03857985883951187
+Dropout_folded: 0.04729844629764557[0m
+[1;31m# 123 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 124 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.008718587458133698
+Location: [0, 104, 621]
+GPT2MLP_original: 0.03857985883951187
+GPT2MLP_folded: 0.04729844629764557[0m
+[1;31m# 124 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 125 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.01746026985347271
+Location: [0, 56, 219]
+GPT2Block_original: 0.011356798931956291
+GPT2Block_folded: 0.028817068785429[0m
+[1;31m# 125 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 126 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.01099521666765213
+Location: [0, 0, 92, 19]
+GPT2Block_original: -0.01154501736164093
+GPT2Block_folded: -0.0005498006939888[0m
+[1;31m# 126 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 127 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010459661483764648
+Location: [0, 10, 63, 20]
+GPT2Block_original: -1.1593852043151855
+GPT2Block_folded: -1.1698448657989502[0m
+[1;31m# 127 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 128 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 128 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 129 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019012928009033203
+Location: [0, 17, 602]
+MyLayerNorm_original: -0.9045087099075317
+SOLayerNorm_folded: -0.8854957818984985[0m
+[1;31m# 129 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 130 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011919751763343811
+Location: [0, 54, 1841]
+Conv1D_original: -0.1149754673242569
+Conv1D_folded: -0.1268952190876007[0m
+[1;31m# 130 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 131 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0018638372421264648
+Location: [0, 1, 155]
+Conv1D_original: 0.13871698081493378
+Conv1D_folded: 0.14058081805706024[0m
+[1;31m# 131 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 132 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0018638372421264648
+Location: [0, 1, 155]
+Dropout_original: 0.13871698081493378
+Dropout_folded: 0.14058081805706024[0m
+[1;31m# 132 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 133 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.0018638372421264648
+Location: [0, 1, 155]
+GPT2SdpaAttention_original: 0.13871698081493378
+GPT2SdpaAttention_folded: 0.14058081805706024[0m
+[1;31m# 133 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 134 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010721921920776367
+Location: [0, 3, 108, 36]
+GPT2SdpaAttention_original: -0.5726980566978455
+GPT2SdpaAttention_folded: -0.5834199786186218[0m
+[1;31m# 134 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 135 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.011919751763343811
+Location: [0, 4, 54, 49]
+GPT2SdpaAttention_original: -0.1149754673242569
+GPT2SdpaAttention_folded: -0.1268952190876007[0m
+[1;31m# 135 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 136 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 136 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 137 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019022047519683838
+Location: [0, 123, 137]
+MyLayerNorm_original: 0.8038751482963562
+SOLayerNorm_folded: 0.7848531007766724[0m
+[1;31m# 137 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 138 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011506915092468262
+Location: [0, 90, 2980]
+Conv1D_original: 0.8077027201652527
+Conv1D_folded: 0.7961958050727844[0m
+[1;31m# 138 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 139 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.012653589248657227
+Location: [0, 73, 2676]
+NewGELUActivation_original: 0.9767884016036987
+NewGELUActivation_folded: 0.989441990852356[0m
+[1;31m# 139 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 140 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.006998695433139801
+Location: [0, 29, 117]
+Conv1D_original: 0.08487264066934586
+Conv1D_folded: 0.07787394523620605[0m
+[1;31m# 140 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 141 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.006998695433139801
+Location: [0, 29, 117]
+Dropout_original: 0.08487264066934586
+Dropout_folded: 0.07787394523620605[0m
+[1;31m# 141 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 142 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.006998695433139801
+Location: [0, 29, 117]
+GPT2MLP_original: 0.08487264066934586
+GPT2MLP_folded: 0.07787394523620605[0m
+[1;31m# 142 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 143 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.01697314903140068
+Location: [0, 20, 392]
+GPT2Block_original: -0.04058782756328583
+GPT2Block_folded: -0.05756097659468651[0m
+[1;31m# 143 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 144 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010721921920776367
+Location: [0, 3, 108, 36]
+GPT2Block_original: -0.5726980566978455
+GPT2Block_folded: -0.5834199786186218[0m
+[1;31m# 144 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 145 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.011919751763343811
+Location: [0, 4, 54, 49]
+GPT2Block_original: -0.1149754673242569
+GPT2Block_folded: -0.1268952190876007[0m
+[1;31m# 145 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 146 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 146 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 147 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019993185997009277
+Location: [0, 123, 137]
+MyLayerNorm_original: 1.1294004917144775
+SOLayerNorm_folded: 1.1094073057174683[0m
+[1;31m# 147 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 148 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0115070641040802
+Location: [0, 87, 1225]
+Conv1D_original: 0.3565560579299927
+Conv1D_folded: 0.3450489938259125[0m
+[1;31m# 148 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 149 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.00248907133936882
+Location: [0, 36, 372]
+Conv1D_original: -0.04343337565660477
+Conv1D_folded: -0.04094430431723595[0m
+[1;31m# 149 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 150 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.00248907133936882
+Location: [0, 36, 372]
+Dropout_original: -0.04343337565660477
+Dropout_folded: -0.04094430431723595[0m
+[1;31m# 150 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 151 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.00248907133936882
+Location: [0, 36, 372]
+GPT2SdpaAttention_original: -0.04343337565660477
+GPT2SdpaAttention_folded: -0.04094430431723595[0m
+[1;31m# 151 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 152 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.0115070641040802
+Location: [0, 7, 87, 9]
+GPT2SdpaAttention_original: 0.3565560579299927
+GPT2SdpaAttention_folded: 0.3450489938259125[0m
+[1;31m# 152 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 153 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.011075377464294434
+Location: [0, 6, 103, 8]
+GPT2SdpaAttention_original: 0.5530315637588501
+GPT2SdpaAttention_folded: 0.5419561862945557[0m
+[1;31m# 153 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 154 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 154 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 155 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.020241618156433105
+Location: [0, 123, 137]
+MyLayerNorm_original: 1.098807692527771
+SOLayerNorm_folded: 1.078566074371338[0m
+[1;31m# 155 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 156 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.012590169906616211
+Location: [0, 108, 1840]
+Conv1D_original: 1.0075470209121704
+Conv1D_folded: 1.0201371908187866[0m
+[1;31m# 156 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 157 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.013675987720489502
+Location: [0, 108, 1840]
+NewGELUActivation_original: 0.8493719696998596
+NewGELUActivation_folded: 0.8630479574203491[0m
+[1;31m# 157 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 158 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0056895911693573
+Location: [0, 89, 449]
+Conv1D_original: -0.13654237985610962
+Conv1D_folded: -0.13085278868675232[0m
+[1;31m# 158 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 159 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0056895911693573
+Location: [0, 89, 449]
+Dropout_original: -0.13654237985610962
+Dropout_folded: -0.13085278868675232[0m
+[1;31m# 159 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 160 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.0056895911693573
+Location: [0, 89, 449]
+GPT2MLP_original: -0.13654237985610962
+GPT2MLP_folded: -0.13085278868675232[0m
+[1;31m# 160 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 161 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.019379734992980957
+Location: [0, 56, 219]
+GPT2Block_original: -0.2061420977115631
+GPT2Block_folded: -0.18676236271858215[0m
+[1;31m# 161 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 162 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.0115070641040802
+Location: [0, 7, 87, 9]
+GPT2Block_original: 0.3565560579299927
+GPT2Block_folded: 0.3450489938259125[0m
+[1;31m# 162 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 163 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.011075377464294434
+Location: [0, 6, 103, 8]
+GPT2Block_original: 0.5530315637588501
+GPT2Block_folded: 0.5419561862945557[0m
+[1;31m# 163 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 164 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 164 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 165 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.01924264430999756
+Location: [0, 123, 137]
+MyLayerNorm_original: 1.1168519258499146
+SOLayerNorm_folded: 1.097609281539917[0m
+[1;31m# 165 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 166 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011640682816505432
+Location: [0, 87, 95]
+Conv1D_original: -0.19554993510246277
+Conv1D_folded: -0.18390925228595734[0m
+[1;31m# 166 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 167 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0022195088677108288
+Location: [0, 76, 460]
+Conv1D_original: -0.007488679606467485
+Conv1D_folded: -0.009708188474178314[0m
+[1;31m# 167 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 168 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0022195088677108288
+Location: [0, 76, 460]
+Dropout_original: -0.007488679606467485
+Dropout_folded: -0.009708188474178314[0m
+[1;31m# 168 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 169 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.0022195088677108288
+Location: [0, 76, 460]
+GPT2SdpaAttention_original: -0.007488679606467485
+GPT2SdpaAttention_folded: -0.009708188474178314[0m
+[1;31m# 169 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 170 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010803818702697754
+Location: [0, 4, 87, 0]
+GPT2SdpaAttention_original: 0.3225770592689514
+GPT2SdpaAttention_folded: 0.33338087797164917[0m
+[1;31m# 170 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 171 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010841846466064453
+Location: [0, 1, 30, 33]
+GPT2SdpaAttention_original: -1.1130503416061401
+GPT2SdpaAttention_folded: -1.1238921880722046[0m
+[1;31m# 171 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 172 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 172 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 173 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019474387168884277
+Location: [0, 123, 137]
+MyLayerNorm_original: 1.0087324380874634
+SOLayerNorm_folded: 0.9892580509185791[0m
+[1;31m# 173 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 174 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.012723743915557861
+Location: [0, 119, 912]
+Conv1D_original: 0.48633408546447754
+Conv1D_folded: 0.4990578293800354[0m
+[1;31m# 174 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 175 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.011183023452758789
+Location: [0, 103, 381]
+NewGELUActivation_original: 0.49239417910575867
+NewGELUActivation_folded: 0.4812111556529999[0m
+[1;31m# 175 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 176 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.009915832430124283
+Location: [0, 66, 545]
+Conv1D_original: 0.03767215833067894
+Conv1D_folded: 0.04758799076080322[0m
+[1;31m# 176 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 177 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.009915832430124283
+Location: [0, 66, 545]
+Dropout_original: 0.03767215833067894
+Dropout_folded: 0.04758799076080322[0m
+[1;31m# 177 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 178 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.009915832430124283
+Location: [0, 66, 545]
+GPT2MLP_original: 0.03767215833067894
+GPT2MLP_folded: 0.04758799076080322[0m
+[1;31m# 178 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 179 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.02192521095275879
+Location: [0, 56, 219]
+GPT2Block_original: 0.03671586513519287
+GPT2Block_folded: 0.05864107608795166[0m
+[1;31m# 179 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 180 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010803818702697754
+Location: [0, 4, 87, 0]
+GPT2Block_original: 0.3225770592689514
+GPT2Block_folded: 0.33338087797164917[0m
+[1;31m# 180 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 181 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010841846466064453
+Location: [0, 1, 30, 33]
+GPT2Block_original: -1.1130503416061401
+GPT2Block_folded: -1.1238921880722046[0m
+[1;31m# 181 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 182 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 182 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 183 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.018776774406433105
+Location: [0, 103, 329]
+MyLayerNorm_original: -1.5978550910949707
+SOLayerNorm_folded: -1.5790783166885376[0m
+[1;31m# 183 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 184 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.013035610318183899
+Location: [0, 30, 1209]
+Conv1D_original: 0.13344800472259521
+Conv1D_folded: 0.12041239440441132[0m
+[1;31m# 184 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 185 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.0056521110236644745
+Location: [0, 0, 378]
+Conv1D_original: -0.03199199587106705
+Conv1D_folded: -0.03764410689473152[0m
+[1;31m# 185 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 186 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.0056521110236644745
+Location: [0, 0, 378]
+Dropout_original: -0.03199199587106705
+Dropout_folded: -0.03764410689473152[0m
+[1;31m# 186 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 187 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.0056521110236644745
+Location: [0, 0, 378]
+GPT2SdpaAttention_original: -0.03199199587106705
+GPT2SdpaAttention_folded: -0.03764410689473152[0m
+[1;31m# 187 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 188 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.013035610318183899
+Location: [0, 6, 30, 57]
+GPT2SdpaAttention_original: 0.13344800472259521
+GPT2SdpaAttention_folded: 0.12041239440441132[0m
+[1;31m# 188 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 189 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010092854499816895
+Location: [0, 3, 108, 34]
+GPT2SdpaAttention_original: -0.4055710434913635
+GPT2SdpaAttention_folded: -0.4156638979911804[0m
+[1;31m# 189 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 190 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 190 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 191 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.018863677978515625
+Location: [0, 123, 137]
+MyLayerNorm_original: 1.112070918083191
+SOLayerNorm_folded: 1.0932072401046753[0m
+[1;31m# 191 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 192 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.012706995010375977
+Location: [0, 30, 2525]
+Conv1D_original: -0.46695685386657715
+Conv1D_folded: -0.4796638488769531[0m
+[1;31m# 192 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 193 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.013043522834777832
+Location: [0, 103, 1304]
+NewGELUActivation_original: 1.149182677268982
+NewGELUActivation_folded: 1.1622262001037598[0m
+[1;31m# 193 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 194 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.007866814732551575
+Location: [0, 73, 627]
+Conv1D_original: 0.12921404838562012
+Conv1D_folded: 0.1370808631181717[0m
+[1;31m# 194 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 195 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.007866814732551575
+Location: [0, 73, 627]
+Dropout_original: 0.12921404838562012
+Dropout_folded: 0.1370808631181717[0m
+[1;31m# 195 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 196 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.007866814732551575
+Location: [0, 73, 627]
+GPT2MLP_original: 0.12921404838562012
+GPT2MLP_folded: 0.1370808631181717[0m
+[1;31m# 196 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 197 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.022832214832305908
+Location: [0, 124, 690]
+GPT2Block_original: -0.3856090307235718
+GPT2Block_folded: -0.36277681589126587[0m
+[1;31m# 197 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 198 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.013035610318183899
+Location: [0, 6, 30, 57]
+GPT2Block_original: 0.13344800472259521
+GPT2Block_folded: 0.12041239440441132[0m
+[1;31m# 198 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 199 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010092854499816895
+Location: [0, 3, 108, 34]
+GPT2Block_original: -0.4055710434913635
+GPT2Block_folded: -0.4156638979911804[0m
+[1;31m# 199 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 200 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 200 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 201 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.0196990966796875
+Location: [0, 103, 329]
+MyLayerNorm_original: -1.8806756734848022
+SOLayerNorm_folded: -1.8609765768051147[0m
+[1;31m# 201 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 202 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.011476948857307434
+Location: [0, 45, 844]
+Conv1D_original: -0.17895448207855225
+Conv1D_folded: -0.19043143093585968[0m
+[1;31m# 202 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 203 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.002199813723564148
+Location: [0, 0, 397]
+Conv1D_original: 0.09817292541265488
+Conv1D_folded: 0.09597311168909073[0m
+[1;31m# 203 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 204 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.002199813723564148
+Location: [0, 0, 397]
+Dropout_original: 0.09817292541265488
+Dropout_folded: 0.09597311168909073[0m
+[1;31m# 204 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 205 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.002199813723564148
+Location: [0, 0, 397]
+GPT2SdpaAttention_original: 0.09817292541265488
+GPT2SdpaAttention_folded: 0.09597311168909073[0m
+[1;31m# 205 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 206 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.011476948857307434
+Location: [0, 1, 45, 12]
+GPT2SdpaAttention_original: -0.17895448207855225
+GPT2SdpaAttention_folded: -0.19043143093585968[0m
+[1;31m# 206 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 207 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;33mMax diff: 0.010566025972366333
+Location: [0, 0, 37, 18]
+GPT2SdpaAttention_original: -0.36044779419898987
+GPT2SdpaAttention_folded: -0.34988176822662354[0m
+[1;31m# 207 [ Fail ] GPT2SdpaAttention_original != GPT2SdpaAttention_folded[0m
+
+[1;34m# 208 [ Test ] GPT2SdpaAttention_original ?= GPT2SdpaAttention_folded[0m
+[1;32m# 208 [ Pass ] GPT2SdpaAttention_original == GPT2SdpaAttention_folded[0m
+
+[1;34m# 209 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.019137263298034668
+Location: [0, 103, 329]
+MyLayerNorm_original: -1.7137054204940796
+SOLayerNorm_folded: -1.694568157196045[0m
+[1;31m# 209 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 210 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.010666072368621826
+Location: [0, 87, 1090]
+Conv1D_original: 0.26260149478912354
+Conv1D_folded: 0.2519354224205017[0m
+[1;31m# 210 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 211 [ Test ] NewGELUActivation_original ?= NewGELUActivation_folded[0m
+[1;33mMax diff: 0.011758565902709961
+Location: [0, 80, 365]
+NewGELUActivation_original: 1.6605253219604492
+NewGELUActivation_folded: 1.6487667560577393[0m
+[1;31m# 211 [ Fail ] NewGELUActivation_original != NewGELUActivation_folded[0m
+
+[1;34m# 212 [ Test ] Conv1D_original ?= Conv1D_folded[0m
+[1;33mMax diff: 0.006757177412509918
+Location: [0, 37, 670]
+Conv1D_original: -0.08054839074611664
+Conv1D_folded: -0.08730556815862656[0m
+[1;31m# 212 [ Fail ] Conv1D_original != Conv1D_folded[0m
+
+[1;34m# 213 [ Test ] Dropout_original ?= Dropout_folded[0m
+[1;33mMax diff: 0.006757177412509918
+Location: [0, 37, 670]
+Dropout_original: -0.08054839074611664
+Dropout_folded: -0.08730556815862656[0m
+[1;31m# 213 [ Fail ] Dropout_original != Dropout_folded[0m
+
+[1;34m# 214 [ Test ] GPT2MLP_original ?= GPT2MLP_folded[0m
+[1;33mMax diff: 0.006757177412509918
+Location: [0, 37, 670]
+GPT2MLP_original: -0.08054839074611664
+GPT2MLP_folded: -0.08730556815862656[0m
+[1;31m# 214 [ Fail ] GPT2MLP_original != GPT2MLP_folded[0m
+
+[1;34m# 215 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.02324722707271576
+Location: [0, 85, 57]
+GPT2Block_original: 0.24839697778224945
+GPT2Block_folded: 0.2716442048549652[0m
+[1;31m# 215 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 216 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.011476948857307434
+Location: [0, 1, 45, 12]
+GPT2Block_original: -0.17895448207855225
+GPT2Block_folded: -0.19043143093585968[0m
+[1;31m# 216 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 217 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;33mMax diff: 0.010566025972366333
+Location: [0, 0, 37, 18]
+GPT2Block_original: -0.36044779419898987
+GPT2Block_folded: -0.34988176822662354[0m
+[1;31m# 217 [ Fail ] GPT2Block_original != GPT2Block_folded[0m
+
+[1;34m# 218 [ Test ] GPT2Block_original ?= GPT2Block_folded[0m
+[1;32m# 218 [ Pass ] GPT2Block_original == GPT2Block_folded[0m
+
+[1;34m# 219 [ Test ] MyLayerNorm_original ?= SOLayerNorm_folded[0m
+[1;33mMax diff: 0.018994450569152832
+Location: [0, 108, 28]
+MyLayerNorm_original: -1.6408803462982178
+SOLayerNorm_folded: -1.6598747968673706[0m
+[1;31m# 219 [ Fail ] MyLayerNorm_original != SOLayerNorm_folded[0m
+
+[1;34m# 220 [ Test ] folded_out[0] ?= original_out[0][0m
+[2m=== folded_out[0] ===[0m
+tensor([[[2.4870e-02, -1.3620e-01, -3.4582e-01,  ..., 5.6410e-03, 6.5393e-01, -4.3367e-01],
+         [5.1748e-01, 4.3117e-01, 7.8653e-01,  ..., -9.6986e-01, 8.7109e-01, -1.2818e+00],
+         [7.8329e-01, 7.4768e-01, -2.5939e-01,  ..., 8.3385e-03, 1.0855e+00, -5.6037e-01],
+         ...,
+         [1.9191e-01, 7.3121e-01, -6.8771e-01,  ..., -2.5439e-01, -3.4247e-01, -2.6406e-01],
+         [3.8034e-02, 6.7756e-01, -1.0164e+00,  ..., -1.9307e-01, 1.0875e+00, -6.1144e-01],
+         [4.3600e-02, 2.6367e+00, -8.0250e-01,  ..., -1.9235e-01, 1.4889e+00, 7.4541e-01]]],
+       device='cuda:0', grad_fn=<ViewBackward0>)
+[2m=== original_out[0] ===[0m
+tensor([[[2.1712e-02, -1.4150e-01, -3.4320e-01,  ..., 3.9670e-03, 6.5941e-01, -4.2921e-01],
+         [5.1380e-01, 4.2810e-01, 7.8693e-01,  ..., -9.6909e-01, 8.7120e-01, -1.2768e+00],
+         [7.8011e-01, 7.4773e-01, -2.6297e-01,  ..., 6.7078e-03, 1.0873e+00, -5.5771e-01],
+         ...,
+         [1.8941e-01, 7.3671e-01, -6.8908e-01,  ..., -2.5222e-01, -3.3449e-01, -2.5983e-01],
+         [3.0729e-02, 6.8014e-01, -1.0200e+00,  ..., -1.9081e-01, 1.1007e+00, -6.1009e-01],
+         [3.8302e-02, 2.6348e+00, -8.0384e-01,  ..., -1.8258e-01, 1.4888e+00, 7.4053e-01]]],
+       device='cuda:0', grad_fn=<ViewBackward0>)
+[1;33mMax diff: 0.018994450569152832
+Location: [0, 108, 28]
+folded_out[0]: -1.6598747968673706
+original_out[0]: -1.6408803462982178[0m
+[1;31m# 220 [ Fail ] folded_out[0] != original_out[0][0m
+
+[1;34m==== < Summary > ====[0m
+[1;31m# 0 [ Fail ][0m Embedding_original != Embedding_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 1 [ Fail ][0m Embedding_original != Embedding_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 2 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 3 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 4 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 5 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 6 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 7 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 8 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 9 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 10 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 11 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 12 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 13 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 14 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 15 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 16 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 17 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 18 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 19 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 20 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 21 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 22 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 23 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 24 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 25 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 26 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 27 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 28 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 29 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 30 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 31 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 32 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 33 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 34 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 35 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 36 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 37 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 38 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 39 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 40 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 41 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 42 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 43 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 44 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 45 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 46 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 47 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 48 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 49 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 50 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 51 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 52 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 53 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 54 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 55 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 56 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 57 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 58 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 59 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 60 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 61 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 62 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 63 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 64 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 65 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 66 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 67 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 68 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 69 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 70 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 71 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 72 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 73 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 74 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 75 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 76 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 77 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 78 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 79 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 80 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 81 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 82 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 83 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 84 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 85 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 86 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 87 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 88 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 89 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 90 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 91 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 92 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 93 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 94 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 95 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 96 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 97 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 98 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 99 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 100 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 101 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 102 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 103 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 104 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 105 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 106 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 107 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 108 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 109 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 110 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 111 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 112 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 113 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 114 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 115 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 116 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 117 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 118 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 119 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 120 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 121 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 122 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 123 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 124 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 125 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 126 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 127 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 128 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 129 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 130 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 131 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 132 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 133 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 134 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 135 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 136 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 137 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 138 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 139 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 140 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 141 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 142 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 143 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 144 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 145 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 146 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 147 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 148 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 149 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 150 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 151 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 152 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 153 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 154 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 155 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 156 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 157 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 158 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 159 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 160 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 161 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 162 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 163 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 164 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 165 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 166 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 167 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 168 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 169 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 170 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 171 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 172 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 173 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 174 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 175 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 176 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 177 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 178 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 179 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 180 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 181 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 182 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 183 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 184 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 185 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 186 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 187 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 188 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 189 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 190 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 191 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 192 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 193 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 194 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 195 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 196 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 197 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 198 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 199 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 200 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 201 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 202 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 203 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 204 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 205 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 206 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 207 [ Fail ][0m GPT2SdpaAttention_original != GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 208 [ Pass ][0m GPT2SdpaAttention_original == GPT2SdpaAttention_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 209 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 210 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 211 [ Fail ][0m NewGELUActivation_original != NewGELUActivation_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 212 [ Fail ][0m Conv1D_original != Conv1D_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 213 [ Fail ][0m Dropout_original != Dropout_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 214 [ Fail ][0m GPT2MLP_original != GPT2MLP_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 215 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 216 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 217 [ Fail ][0m GPT2Block_original != GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;32m# 218 [ Pass ][0m GPT2Block_original == GPT2Block_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 219 [ Fail ][0m MyLayerNorm_original != SOLayerNorm_folded [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+[1;31m# 220 [ Fail ][0m folded_out[0] != original_out[0] [2m(rel_tol=1e-05, abs_tol=1e-05)[0m
+-------------------
+[1;34m(24/221) [[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;31mX[0m[1;32m=[0m[1;31mX[0m[1;31mX[0m[1;34m][0m
+[1;34m==== </Summary > ====[0m
+
