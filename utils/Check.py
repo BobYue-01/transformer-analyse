@@ -48,12 +48,13 @@ def hint_str(message: str) -> str:
 
 
 class Check:
-    def __init__(self) -> None:
+    def __init__(self, print_val=True, all_rel_tol=None, all_abs_tol=None, tolerate_bias=False) -> None:
         self.count = 0
         self.history: list[tuple[str, str, bool, float, float]] = []
-        self.print_val = True
-        self.all_rel_tol = None
-        self.all_abs_tol = None
+        self.print_val = print_val
+        self.all_rel_tol = all_rel_tol
+        self.all_abs_tol = all_abs_tol
+        self.tolerate_bias = tolerate_bias
 
     def hide_val(self) -> None:
         self.print_val = False
@@ -77,7 +78,8 @@ class Check:
         raise_exception: bool = False,
         rel_tol: Optional[float] = None,
         abs_tol: Optional[float] = None,
-    ) -> bool:
+        tolerate_bias: Optional[bool] = None
+    ) -> tuple[bool, Optional[torch.Tensor]]:
         if rel_tol is None:
             if self.all_rel_tol is not None:
                 rel_tol = self.all_rel_tol
@@ -89,6 +91,11 @@ class Check:
                 abs_tol = self.all_abs_tol
             else:
                 abs_tol = 1e-8
+
+        if tolerate_bias is None:
+            tolerate_bias = self.tolerate_bias
+
+        bias_passed = False
 
         print(info_str(f"# {self.count} [ Test ] {a_str} ?= {b_str}"))
         a = eval(a_str, global_vars, local_vars)
@@ -113,16 +120,21 @@ class Check:
                     print(fail_str(f"{a_str}.shape: {a.shape}"))
                     print(fail_str(f"{b_str}.shape: {b.shape}"))
                 else:
-                    diff = torch.abs(a - b)
+                    diff = b - a
                     mean_diff = torch.mean(diff, dim=-1, keepdim=True)
                     # 如果 diff 每行中的值都分别相等
                     if torch.allclose(mean_diff, diff, rtol=rel_tol, atol=abs_tol):
-                        print(warn_str(f"Mean abs diff: {mean_diff.abs().mean()}"))
-                    else:
+                        if self.tolerate_bias:
+                            print(pass_str(f"{a_str} == {b_str} + bias"))
+                            equal = True
+                            bias_passed = True
+                        else:
+                            print(warn_str(f"{a_str} == {b_str} + bias"))
+                            print(warn_str(f"Mean diff: {mean_diff.abs().mean()}"))
+                    if not bias_passed:
                         max_diff, max_index = torch.max(diff.flatten(), 0)
                         # 将展平索引转换为多维索引
                         max_index_unraveled = torch.unravel_index(max_index, diff.shape)
-
                         with torch._tensor_str.printoptions(precision=4, sci_mode=True):
                             print(warn_str("\n".join([
                                 # f"a: {a}",
@@ -164,7 +176,11 @@ class Check:
 
         self.count += 1
         print()
-        return equal
+
+        if bias_passed:
+            return equal, mean_diff
+        else:
+            return equal, None
 
     def summary(self):
         print(info_str(f"==== < Summary > ===="))

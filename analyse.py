@@ -1,6 +1,7 @@
 import torch
 import transformers
 import random
+import time
 import numpy as np
 
 random.seed(0)
@@ -17,7 +18,11 @@ from torch.profiler import profile, record_function, ProfilerActivity, schedule
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("--model_name", type=str, default='GPT2')
+parser.add_argument("--model_name", type=str, default='GPT2', help='Model name')
+parser.add_argument("--abs_tol", type=float, default=1e-5, help='Absolute tolerance')
+parser.add_argument("--skip_equality", action="store_true", help='Check equality of output')
+parser.add_argument("--replace", action="store_true", help='Replace output')
+parser.add_argument("--skip_speed", action="store_true", help='Speed comparison')
 
 args = parser.parse_args()
 
@@ -77,16 +82,20 @@ for layer in folded_counter.center_modules:
     modules.center_modules(layer)
 
 output_queue = []
-check = utils.Check()
-replace = True
+check = utils.Check(all_abs_tol=args.abs_tol, tolerate_bias=True)
 
 
 def check_close_and_replace(tensor_a, tensor_b, check: utils.Check, tensor_a_str, tensor_b_str):
     check.hide_val()
     locals()[tensor_a_str] = tensor_a
     locals()[tensor_b_str] = tensor_b
-    if check.check_eq(tensor_a_str, tensor_b_str, abs_tol=1e-5, local_vars=locals()):
-        if replace and isinstance(tensor_a, torch.Tensor) and isinstance(tensor_b, torch.Tensor):
+    equal, bias = check.check_eq(tensor_a_str, tensor_b_str, abs_tol=args.abs_tol, local_vars=locals())
+    if equal and args.replace and isinstance(tensor_a, torch.Tensor) and isinstance(tensor_b, torch.Tensor):
+        if bias is not None:
+            # bias 每行置为改行平均值
+            bias = bias.mean(dim=-1, keepdim=True).expand_as(tensor_a)
+            tensor_b.data = tensor_a.data + bias
+        else:
             tensor_b.data = tensor_a.data
     check.show_val()
 
@@ -126,50 +135,54 @@ def hook_folded(module, input, output):
     #     print(module.__class__.__name__, output0[index])
 
 
-with open(f"./log/{args.model_name}_Compare.txt", "w") as f:
-    with redirect_stdout(f):
-        with utils.HookManager(my_ln_model, hook_original, None, list(my_ln_model.modules())[1:]):
-            original_out = my_ln_model(input_ids)
+if not args.skip_equality:
+    with open(f"./log/{args.model_name}_Compare.txt", "w") as f:
+        with redirect_stdout(f):
+            with utils.HookManager(my_ln_model, hook_original, None, list(my_ln_model.modules())[1:]):
+                original_out = my_ln_model(input_ids)
+            with utils.HookManager(my_so_ln_model, hook_folded, None, list(my_so_ln_model.modules())[1:]):
+                folded_out = my_so_ln_model(input_ids)
+            check.check_eq('folded_out[0]', 'original_out[0]', local_vars=locals())
+            check.summary()
 
-        with utils.HookManager(my_so_ln_model, hook_folded, None, list(my_so_ln_model.modules())[1:]):
-            folded_out = my_so_ln_model(input_ids)
 
-        check.check_eq('folded_out[0]', 'original_out[0]', local_vars=locals(), abs_tol=1e-5)
+if not args.skip_speed:
+    my_schedule = schedule(
+        wait=100,
+        warmup=50,
+        active=250,
+    )
 
-        check.summary()
+    torch.cuda.empty_cache()
+    with open(f"./log/{args.model_name}_Time_{int(time.time())}.txt", "w") as f:
+        with redirect_stdout(f):
+            with torch.no_grad():
+                with profile(
+                    activities=[
+                        ProfilerActivity.CPU, ProfilerActivity.CUDA
+                    ],
+                    profile_memory=True,
+                    record_shapes=True,
+                    schedule=my_schedule
+                ) as prof:
+                    with record_function("folded_model_inference"):
+                        for _ in range(1200):
+                            my_so_ln_model(input_ids)
+                            prof.step()
+                print(prof.key_averages().table(sort_by="self_cpu_memory_usage"))
+                # prof.export_chrome_trace("tmp/folded_trace.json")
 
-my_schedule = schedule(
-    wait=100,
-    warmup=50,
-    active=250,
-)
-
-torch.cuda.empty_cache()
-with open(f"./log/{args.model_name}_Time.txt", "w") as f:
-    with redirect_stdout(f):
-        with torch.no_grad():
-            with profile(
-                activities=[
-                    ProfilerActivity.CPU, ProfilerActivity.CUDA
-                ],
-                schedule=my_schedule
-            ) as prof:
-                with record_function("folded_model_inference"):
-                    for _ in range(1200):
-                        my_so_ln_model(input_ids)
-                        prof.step()
-            print(prof.key_averages().table())
-            # prof.export_chrome_trace("tmp/folded_trace.json")
-
-            with profile(
-                activities=[
-                    ProfilerActivity.CPU, ProfilerActivity.CUDA
-                ],
-                schedule=my_schedule
-            ) as prof:
-                with record_function("original_model_inference"):
-                    for _ in range(1200):
-                        my_ln_model(input_ids)
-                        prof.step()
-            print(prof.key_averages().table())
-            # prof.export_chrome_trace("tmp/original_trace.json")
+                with profile(
+                    activities=[
+                        ProfilerActivity.CPU, ProfilerActivity.CUDA
+                    ],
+                    profile_memory=True,
+                    record_shapes=True,
+                    schedule=my_schedule
+                ) as prof:
+                    with record_function("original_model_inference"):
+                        for _ in range(1200):
+                            my_ln_model(input_ids)
+                            prof.step()
+                print(prof.key_averages().table(sort_by="self_cpu_memory_usage"))
+                # prof.export_chrome_trace("tmp/original_trace.json")

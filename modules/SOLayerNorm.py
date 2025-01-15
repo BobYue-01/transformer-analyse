@@ -21,7 +21,7 @@ def myln_forward(
 ) -> torch.Tensor:
     mean = torch.mean(x, dim=-1, keepdim=True)
     var = torch.var(x, dim=-1, unbiased=False, keepdim=True)
-    normalized_tensor = (x - mean) / torch.sqrt(var + self.eps)
+    normalized_tensor = (x - mean) / (torch.sqrt(var) + self.eps)
     if self.elementwise_affine:
         normalized_tensor = normalized_tensor * self.weight + self.bias
     return normalized_tensor

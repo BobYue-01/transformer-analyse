@@ -1,3 +1,0 @@
-LayerNorm: 25
-Foldable: 25
-Center modules: {Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=3072), Embedding(50257, 768), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=768), Embedding(1024, 768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=768), Conv1D(nf=768, nx=3072), Conv1D(nf=768, nx=3072)}
