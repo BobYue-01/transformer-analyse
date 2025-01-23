@@ -122,9 +122,9 @@ class Check:
                 else:
                     diff = b - a
                     mean_diff = torch.mean(diff, dim=-1, keepdim=True)
-                    # 如果 diff 每行中的值都分别相等
+                    # 如果 diff 每行中的值都分别相等，检查是否为 Embedding 层
                     if torch.allclose(mean_diff, diff, rtol=rel_tol, atol=abs_tol):
-                        if self.tolerate_bias:
+                        if self.tolerate_bias and 'Embedding' in a_str and 'Embedding' in b_str:
                             print(pass_str(f"{a_str} == {b_str} + bias"))
                             equal = True
                             bias_passed = True

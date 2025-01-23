@@ -5,13 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Without speed",
+            "name": "OPT",
             "type": "debugpy",
             "request": "launch",
             "program": "analyse.py",
             "console": "integratedTerminal",
+            "justMyCode": false,
             "args": [
-                "--speed=False"
+                "--model_name=OPT",
+                "--skip_equality",
+                "--skip_speed"
             ]
         }
     ]
