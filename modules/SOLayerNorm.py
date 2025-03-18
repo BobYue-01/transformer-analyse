@@ -2,40 +2,17 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-
-def native_soln_forward(
-    self: nn.LayerNorm,
-    x: torch.Tensor
-) -> torch.Tensor:
-    return F.rms_norm(
-        x,
-        self.normalized_shape,
-        self.weight,
-        self.eps
-    ) + self.bias
-
-
-def myln_forward(
-    self: nn.LayerNorm,
-    x: torch.Tensor
-) -> torch.Tensor:
-    mean = torch.mean(x, dim=-1, keepdim=True)
-    var = torch.var(x, dim=-1, unbiased=False, keepdim=True)
-    normalized_tensor = (x - mean) / (torch.sqrt(var) + self.eps)
-    if self.elementwise_affine:
-        normalized_tensor = normalized_tensor * self.weight + self.bias
-    return normalized_tensor
+import rms_norm_cpp
 
 
 def soln_forward(
     self: nn.LayerNorm,
     x: torch.Tensor
 ) -> torch.Tensor:
-    norm_x = x.norm(2, dim=-1, keepdim=True) * x.size(-1) ** -.5
-    normalized_tensor = x / (norm_x + self.eps)
-    if self.elementwise_affine:
-        normalized_tensor = normalized_tensor * self.weight + self.bias
-    return normalized_tensor
+    output = rms_norm_cpp.forward(
+        x, self.normalized_shape, self.weight, self.bias, self.eps
+    )
+    return output[0]
 
 
 def replace_layer_norm_forward(
@@ -56,9 +33,9 @@ if __name__ == '__main__':
     torch.backends.cudnn.enabled = False
     torch.cuda.empty_cache()
     my_schedule = schedule(
-        wait=100,
-        warmup=50,
-        active=250,
+        wait=1000,
+        warmup=500,
+        active=2500,
     )
 
     class MyModel(nn.Module):
@@ -73,10 +50,8 @@ if __name__ == '__main__':
         def forward(self, x):
             return self.norm(x)
 
-    model = MyModel().cuda()
-    x = torch.randn(10).cuda()
-
-    replace_layer_norm_forward(model.norm, forward_fn=myln_forward)
+    model = MyModel()
+    x = torch.randn(10)
 
     with profile(
         activities=[
@@ -87,7 +62,7 @@ if __name__ == '__main__':
     ) as prof:
         with torch.no_grad():
             with record_function("LayerNorm"):
-                for _ in range(1200):
+                for _ in range(12000):
                     model(x)
                     prof.step()
                 print(model(x))
@@ -106,7 +81,7 @@ if __name__ == '__main__':
     ) as prof:
         with torch.no_grad():
             with record_function("SOLayerNorm"):
-                for _ in range(1200):
+                for _ in range(12000):
                     model(x)
                     prof.step()
                 print(model(x))
