@@ -55,6 +55,10 @@
         "thread": "cpp",
         "typeinfo": "cpp",
         "__nullptr": "cpp",
-        "__hash_table": "cpp"
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "complex": "cpp",
+        "sstream": "cpp",
+        "variant": "cpp"
     }
 }

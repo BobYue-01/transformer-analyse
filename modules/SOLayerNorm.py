@@ -2,14 +2,15 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-import rms_norm_cpp
+# import rms_norm_cpp
+import rms_norm_cuda
 
 
 def soln_forward(
     self: nn.LayerNorm,
     x: torch.Tensor
 ) -> torch.Tensor:
-    output = rms_norm_cpp.forward(
+    output = rms_norm_cuda.forward(
         x, self.normalized_shape, self.weight, self.bias, self.eps
     )
     return output[0]
@@ -30,7 +31,7 @@ def replace_layer_norm_forward(
 
 if __name__ == '__main__':
     from torch.profiler import profile, record_function, ProfilerActivity, schedule
-    torch.backends.cudnn.enabled = False
+    # torch.backends.cudnn.enabled = False
     torch.cuda.empty_cache()
     my_schedule = schedule(
         wait=1000,
@@ -50,8 +51,8 @@ if __name__ == '__main__':
         def forward(self, x):
             return self.norm(x)
 
-    model = MyModel()
-    x = torch.randn(10)
+    model = MyModel().to('cuda')
+    x = torch.randn(10).to('cuda')
 
     with profile(
         activities=[
@@ -64,9 +65,10 @@ if __name__ == '__main__':
             with record_function("LayerNorm"):
                 for _ in range(12000):
                     model(x)
+                    torch.cuda.synchronize()
                     prof.step()
                 print(model(x))
-        print(prof.key_averages().table(sort_by="self_cpu_time_total", row_limit=10))
+        print(prof.key_averages().table(sort_by="cuda_time_total", row_limit=10))
 
     replace_layer_norm_forward(model.norm, forward_fn=soln_forward)
 
@@ -83,6 +85,7 @@ if __name__ == '__main__':
             with record_function("SOLayerNorm"):
                 for _ in range(12000):
                     model(x)
+                    torch.cuda.synchronize()
                     prof.step()
                 print(model(x))
-        print(prof.key_averages().table(sort_by="self_cpu_time_total", row_limit=10))
+        print(prof.key_averages().table(sort_by="cuda_time_total", row_limit=10))
